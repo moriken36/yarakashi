@@ -80,13 +80,14 @@ export default function ScreenPage() {
           </div>
         </div>
         {postUrl && (
-          <div className="flex items-center gap-3">
-            <div className="rounded-xl bg-white p-2.5 shadow-lg">
-              <QRCodeSVG value={postUrl} size={72} />
+          <div className="flex flex-col items-center">
+            <div className="rounded-2xl bg-white p-3 shadow-lg">
+              <QRCodeSVG value={postUrl} size={90} />
             </div>
-            <p className="text-sm font-medium text-white/80">
-              投稿はこちら
-            </p>
+            <div className="relative mt-2 rounded-lg bg-white px-4 py-1.5 shadow">
+              <div className="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rotate-45 bg-white" />
+              <p className="text-sm font-bold text-gray-700">投稿はこちら</p>
+            </div>
           </div>
         )}
       </div>
