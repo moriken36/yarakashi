@@ -61,9 +61,9 @@ export default function MainDisplay({ posts }: { posts: Post[] }) {
   const current = posts[currentIndex];
 
   return (
-    <div className="flex flex-1 items-center justify-center px-24">
+    <div className="flex flex-1 items-center justify-center px-16">
       <div
-        className="w-full max-w-3xl rounded-2xl px-12 py-10 shadow-xl transition-opacity duration-500"
+        className="w-full max-w-4xl rounded-2xl px-14 py-10 shadow-xl transition-opacity duration-500"
         style={{ opacity: visible ? 1 : 0, backgroundColor: "#F4F6F8" }}
       >
         {/* Pen name */}
@@ -71,20 +71,20 @@ export default function MainDisplay({ posts }: { posts: Post[] }) {
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-2xl font-bold text-white" style={{ backgroundColor: "#4ecfff" }}>
             {current?.name?.charAt(0)}
           </div>
-          <p className="text-2xl font-extrabold text-gray-800">
+          <p className="text-3xl font-extrabold text-gray-800">
             ラジオネーム：{current?.name}
           </p>
         </div>
 
         {/* Title */}
         {current?.title && (
-          <p className="mb-6 text-xl font-bold text-gray-500">
+          <p className="mb-6 text-2xl font-bold text-gray-500">
             {current.title}
           </p>
         )}
 
         {/* Body */}
-        <p className="max-w-2xl whitespace-pre-wrap text-[1.7rem] leading-[1.8] text-gray-800">
+        <p className="whitespace-pre-wrap text-[2rem] leading-[1.8] text-gray-800">
           {current?.body}
         </p>
       </div>

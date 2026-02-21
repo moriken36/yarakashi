@@ -61,20 +61,20 @@ export default function ScreenPage() {
   return (
     <div className="flex h-dvh flex-col" style={{ backgroundColor: "#4ecfff" }}>
       {/* Header */}
-      <div className="flex items-center justify-between px-10 py-5">
+      <div className="flex items-center justify-between py-4 pl-4 pr-10">
         <div className="flex items-center gap-1">
           <Image
             src="/logo.png"
             alt="やらかし"
-            width={70}
-            height={70}
+            width={100}
+            height={100}
             className="object-contain"
           />
           <div>
-            <h1 className="text-3xl font-extrabold tracking-wider text-white">
+            <h1 className="text-5xl font-extrabold tracking-wider text-white">
               やらかしちゃった展
             </h1>
-            <p className="text-sm tracking-wide text-white/60">
+            <p className="text-base tracking-wide text-white/60">
               — みんなの黒歴史、放送中 —
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function ScreenPage() {
         {postUrl && (
           <div className="flex flex-col items-center">
             <div className="rounded-2xl bg-white p-3 shadow-lg">
-              <QRCodeSVG value={postUrl} size={90} />
+              <QRCodeSVG value={postUrl} size={120} />
             </div>
             <div className="relative mt-2 rounded-lg bg-white px-4 py-1.5 shadow">
               <div className="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rotate-45 bg-white" />
